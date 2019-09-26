@@ -1,0 +1,21 @@
+## Interface: 80205
+## Title: |cffd6266cWhatADrop|r
+## Version: 3.0
+## Notes: |cff00ff00Mythic Loot item level for Keystone, Weekly Chest and Weekly Azerite Armor.
+## Author: Original by Artanis edit by BloddDragon2580
+
+embeds.xml
+
+enUS.lua
+
+deDE.lua
+
+itIT.lua
+
+zhCN.lua
+
+koKR.lua
+
+zhTW.lua
+
+WhatADrop.lua
