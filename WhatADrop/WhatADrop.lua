@@ -89,18 +89,20 @@ GameTooltip:HookScript("OnTooltipCleared", OnTooltipCleared)
 hooksecurefunc("ChatFrame_OnHyperlinkShow",SetHyperlink_Hook)
 
 function WhatADropItemLevel(mlvl)
- if (mlvl == "2" or mlvl == "3") then
-  return "405"
+ if (mlvl == "2") then
+  return "435"
+ elseif (mlvl == "3") then
+  return "440"
  elseif (mlvl == "4") then
-  return "410"
+  return "445"
  elseif (mlvl == "5" or mlvl == "6") then
-  return "415"
+  return "450"
  elseif (mlvl == "7") then
-  return "420"
+  return "455"
  elseif (mlvl == "8" or mlvl == "9") then
-  return "425"
+  return "460"
  elseif (mlvl >= "10") then
-  return "430"
+  return "465"
  else
   return ""
  end
@@ -110,19 +112,23 @@ end
 
 function MythicWeeklyLootItemLevel(mlvl)
  if (mlvl == "2") then
-  return "410"
+  return "445"
  elseif (mlvl == "3") then
-  return "415"
- elseif (mlvl == "4" or mlvl == "5") then
-  return "420"
+  return "450"
+ elseif (mlvl == "4") then
+  return "455"
+ elseif (mlvl == "5") then
+  return "460"
  elseif (mlvl == "6") then
-  return "425"
- elseif (mlvl == "7" or mlvl == "8") then
-  return "430" 
+  return "460"
+ elseif (mlvl == "7") then
+  return "465" 
+ elseif (mlvl == "8") then
+  return "470"
  elseif (mlvl == "9") then
-  return "435"
+  return "470"
  elseif (mlvl >= "10") then
-  return "440"
+  return "475"
  else
   return ""
  end
