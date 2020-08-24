@@ -10,3 +10,4 @@ L["Weekly Chest Reward"] = true
 
 L["Loot Item Level: "] = true
 L["Weekly Chest Item Level: "] = true
+L["Weekly Residuum Amount: "] = true

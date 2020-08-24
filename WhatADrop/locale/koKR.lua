@@ -11,3 +11,4 @@ L["Weekly Chest Reward"] = "주간 상자 보상"
 
 L["Loot Item Level: "] = "전리품 아이템 레벨: "
 L["Weekly Chest Item Level: "] = "주간 상자 아이템 레벨: "
+L["Weekly Residuum Amount: "] = "Weekly Residuum Amount:"

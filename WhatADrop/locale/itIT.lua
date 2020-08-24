@@ -11,3 +11,4 @@ L["Weekly Chest Reward"] = "Premio Forziere Settimanale"
 
 L["Loot Item Level: "] = "Item Level Bottino: "
 L["Weekly Chest Item Level: "] = "Item Level Forziere Settimanale: "
+L["Weekly Residuum Amount: "] = "Settimanalmente Residuo Titanico:"

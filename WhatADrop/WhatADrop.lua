@@ -14,11 +14,9 @@ frame:SetScript("OnEvent",function(self,event,...)
     end
 end)
 
--- Tooltip functions
 function sdm_OnEnterTippedButton(self)
-	GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-		
-	GameTooltip:AddLine("|cffff00ff" .. L["Weekly Chest Reward"]  .."|r")
+	GameTooltip:SetOwner(self, "ANCHOR_RIGHT")		
+	GameTooltip:AddLine("|CFFFF9900" .. L["Weekly Chest Reward"]  .."|r")
 	GameTooltip:AddLine("|cff00ff00" .. self.tooltipText .."|r")
 	GameTooltip:Show()
 end
@@ -27,7 +25,6 @@ function sdm_OnLeaveTippedButton()
 	GameTooltip_Hide()
 end
 
--- if text is provided, sets up the button to show a tooltip when moused over. Otherwise, removes the tooltip.
 function sdm_SetTooltip(self, text)
 	if text then
 		self.tooltipText = text
@@ -45,17 +42,19 @@ local function OnTooltipSetItem(tooltip, ...)
 	if (link == nil) then
 		return
 	end
-
 	for itemLink in link:gmatch("|%x+|Hkeystone:.-|h.-|h|r") do
 		local itemString = string.match(itemLink, "keystone[%-?%d:]+")
 		local mlvl = select(4, strsplit(":", itemString))
 
 		local ilvl = WhatADropItemLevel(mlvl)
 		local wlvl = MythicWeeklyLootItemLevel(mlvl)
-		
-			if not lineAdded then						
-				tooltip:AddLine("|cffff00ff" .. L["Loot Item Level: "] .. ilvl .. "+" .. "|r") --551A8B   --ff00ff 
-				tooltip:AddLine("|cffff00ff" .. L["Weekly Chest Item Level: "] .. wlvl .."|r") --551A8B   --ff00ff
+		local alvl = MythicWeeklyResiduumAmount(mlvl)
+			if not lineAdded then
+				tooltip:AddLine("|CFFFF9900" .. L["_"] .."|r")
+				tooltip:AddLine("|CFFFF9900" .. L["Loot Item Level: "] .. ilvl .. "|r")
+				tooltip:AddLine("|CFFFF9900" .. L["Weekly Chest Item Level: "] .. wlvl .."|r")
+				tooltip:AddLine("|CFFFF9900" .. L["Weekly Residuum Amount: "] .. alvl .."|r")
+				tooltip:AddLine("|CFFFF9900" .. L["_"] .."|r")
 				lineAdded = true
 			end
 	end
@@ -65,7 +64,6 @@ local function OnTooltipCleared(tooltip, ...)
    lineAdded = false
 end
 
--- ITEM REF Tooltip
 local function SetHyperlink_Hook(self,hyperlink,text,button)		
 	local itemString = string.match(hyperlink, "keystone[%-?%d:]+")
 	if itemString == nil or itemString == "" then return end
@@ -74,12 +72,12 @@ local function SetHyperlink_Hook(self,hyperlink,text,button)
 
 		local ilvl = WhatADropItemLevel(mlvl)
 		local wlvl = MythicWeeklyLootItemLevel(mlvl)
-			
-									   
-															
-  			
-			ItemRefTooltip:AddLine("|cffff00ff" .. L["Loot Item Level: "] .. ilvl .. "+" .. "|r", 1,1,1,true) --551A8B   --ff00ff 
-			ItemRefTooltip:AddLine("|cffff00ff" .. L["Weekly Chest Item Level: "] .. wlvl .."|r", 1,1,1,true) --551A8B   --ff00ff 
+		local alvl = MythicWeeklyResiduumAmount(mlvl)
+			ItemRefTooltip:AddLine("|CFFFF9900" .. L["_"] .."|r", 1,1,1,true)
+			ItemRefTooltip:AddLine("|CFFFF9900" .. L["Loot Item Level: "] .. ilvl .. "+" .. "|r", 1,1,1,true)
+			ItemRefTooltip:AddLine("|CFFFF9900" .. L["Weekly Chest Item Level: "] .. wlvl .."|r", 1,1,1,true)
+			ItemRefTooltip:AddLine("|CFFFF9900" .. L["Weekly Residuum Amount: "] .. alvl .."|r", 1,1,1,true)
+			ItemRefTooltip:AddLine("|CFFFF9900" .. L["_"] .."|r", 1,1,1,true)
 			ItemRefTooltip:Show()
 	end
 end
@@ -108,8 +106,6 @@ function WhatADropItemLevel(mlvl)
  end
 end
 
- 
-
 function MythicWeeklyLootItemLevel(mlvl)
  if (mlvl == "2") then
   return "440"
@@ -132,22 +128,67 @@ function MythicWeeklyLootItemLevel(mlvl)
  end
 end
 
-
+function MythicWeeklyResiduumAmount(mlvl)
+ if (mlvl == "2") then
+  return "TBD"
+ elseif (mlvl == "3") then
+  return "TBD"
+ elseif (mlvl == "4") then
+  return "TBD"
+ elseif (mlvl == "5") then
+  return "68"
+ elseif (mlvl == "6") then
+  return "75"
+ elseif (mlvl == "7") then
+  return "TBD"
+ elseif (mlvl == "8") then
+  return "TBD"
+ elseif (mlvl == "9") then
+  return "TBD"
+ elseif (mlvl == "10") then
+  return "1700"
+ elseif (mlvl == "11") then
+  return "1790" 
+ elseif (mlvl == "12") then
+  return "1880"  
+ elseif (mlvl == "13") then
+  return "1970"
+ elseif (mlvl == "14") then
+  return "2060"
+ elseif (mlvl == "15") then
+  return "2150"
+ elseif (mlvl == "16") then
+  return "2240"
+ elseif (mlvl == "17") then
+  return "2330"
+ elseif (mlvl == "18") then
+  return "2420"
+ elseif (mlvl == "19") then
+  return "2510"
+ elseif (mlvl == "20") then
+  return "2600"
+ elseif (mlvl == "21") then
+  return "2665"
+ elseif (mlvl == "22") then
+  return "2730"
+ elseif (mlvl == "23") then
+  return "2795"
+ elseif (mlvl == "24") then
+  return "2860"
+ elseif (mlvl == "25") then
+  return "2915"
+ else
+  return ""
+ end
+end
 function WhatADrop:OnInitialize()
-		-- Called when the addon is loaded
-
-		-- Print a message to the chat frame
 		self:Print(L["WhatADrop: Loaded"])
 end
 
-function WhatADrop:OnEnable()
-		-- Called when the addon is enabled
-
-		-- Print a message to the chat frame		
+function WhatADrop:OnEnable()		
 		self:Print(L["WhatADrop: Enabled"])
 end
 
 function WhatADrop:OnDisable()
-		-- Called when the addon is disabled
 		self:Print(L["WhatADrop: Disabled"])
 end
