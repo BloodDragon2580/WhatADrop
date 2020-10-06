@@ -1,8 +1,8 @@
 --- **AceLocale-3.0** manages localization in addons, allowing for multiple locale to be registered with fallback to the base locale for untranslated strings.
 -- @class file
 -- @name AceLocale-3.0
--- @release $Id: AceLocale-3.0.lua 1005 2011-01-29 14:19:43Z mikk $
-local MAJOR,MINOR = "AceLocale-3.0", 5
+-- @release $Id: AceLocale-3.0.lua 1035 2011-07-09 03:20:13Z kaelten $
+local MAJOR,MINOR = "AceLocale-3.0", 6
 
 local AceLocale, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
 
@@ -10,7 +10,7 @@ if not AceLocale then return end -- no upgrade needed
 
 -- Lua APIs
 local assert, tostring, error = assert, tostring, error
-local setmetatable, rawset, rawget = setmetatable, rawset, rawget
+local getmetatable, setmetatable, rawset, rawget = getmetatable, setmetatable, rawset, rawget
 
 -- Global vars/functions that we don't upvalue since they might get hooked, or upgraded
 -- List them here for Mikk's FindGlobals script
@@ -97,7 +97,7 @@ function AceLocale:NewLocale(application, locale, isDefault, silent)
 
 	local app = AceLocale.apps[application]
 
-	if silent and app then
+	if silent and app and getmetatable(app) ~= readmetasilent then
 		geterrorhandler()("Usage: NewLocale(application, locale[, isDefault[, silent]]): 'silent' must be specified for the first locale registered")
 	end
 
