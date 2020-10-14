@@ -11,8 +11,7 @@ L["Weekly Chest Reward"] = "每週寶箱獎勵"
 
 L["Loot Item Level: "] = "戰利品等級: "
 L["Weekly Chest Item Level: "] = "每週寶箱物品等級: "
-L["Weekly Residuum Amount: "] = "Weekly Residuum Amount:"
-
+L["_"] = "+===============================+"
 
 
 

@@ -11,5 +11,4 @@ L["Weekly Chest Reward"] = "Wöchentliche Belohnung"
 
 L["Loot Item Level: "] = "Loot Gegenstandsstufe: "
 L["Weekly Chest Item Level: "] = "Wöchentliche Truhe Gegenstandsstufe: "
-L["Weekly Residuum Amount: "] = "Wöchentliches Titanenresiduum:"
 L["_"] = "+===============================+"

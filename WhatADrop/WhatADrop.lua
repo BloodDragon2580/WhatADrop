@@ -48,12 +48,10 @@ local function OnTooltipSetItem(tooltip, ...)
 
 		local ilvl = WhatADropItemLevel(mlvl)
 		local wlvl = MythicWeeklyLootItemLevel(mlvl)
-		local alvl = MythicWeeklyResiduumAmount(mlvl)
 			if not lineAdded then
 				tooltip:AddLine("|CFFFF9900" .. L["_"] .."|r")
 				tooltip:AddLine("|CFFFF9900" .. L["Loot Item Level: "] .. ilvl .. "|r")
 				tooltip:AddLine("|CFFFF9900" .. L["Weekly Chest Item Level: "] .. wlvl .."|r")
-				tooltip:AddLine("|CFFFF9900" .. L["Weekly Residuum Amount: "] .. alvl .."|r")
 				tooltip:AddLine("|CFFFF9900" .. L["_"] .."|r")
 				lineAdded = true
 			end
@@ -72,11 +70,9 @@ local function SetHyperlink_Hook(self,hyperlink,text,button)
 
 		local ilvl = WhatADropItemLevel(mlvl)
 		local wlvl = MythicWeeklyLootItemLevel(mlvl)
-		local alvl = MythicWeeklyResiduumAmount(mlvl)
 			ItemRefTooltip:AddLine("|CFFFF9900" .. L["_"] .."|r", 1,1,1,true)
 			ItemRefTooltip:AddLine("|CFFFF9900" .. L["Loot Item Level: "] .. ilvl .. "+" .. "|r", 1,1,1,true)
 			ItemRefTooltip:AddLine("|CFFFF9900" .. L["Weekly Chest Item Level: "] .. wlvl .."|r", 1,1,1,true)
-			ItemRefTooltip:AddLine("|CFFFF9900" .. L["Weekly Residuum Amount: "] .. alvl .."|r", 1,1,1,true)
 			ItemRefTooltip:AddLine("|CFFFF9900" .. L["_"] .."|r", 1,1,1,true)
 			ItemRefTooltip:Show()
 	end
@@ -87,20 +83,22 @@ GameTooltip:HookScript("OnTooltipCleared", OnTooltipCleared)
 hooksecurefunc("ChatFrame_OnHyperlinkShow",SetHyperlink_Hook)
 
 function WhatADropItemLevel(mlvl)
- if (mlvl == "2" or mlvl == "3") then
-  return "435"
- elseif (mlvl == "4") then
-  return "440"
- elseif (mlvl == "5" or mlvl == "6") then
-  return "445"
+ if (mlvl == "2") then
+  return "187"
+ elseif (mlvl == "3") then
+  return "190"
+ elseif (mlvl == "4" or mlvl == "5") then
+  return "194"
+ elseif (mlvl == "6") then
+  return "197"
  elseif (mlvl == "7" or mlvl == "8" or mlvl == "9") then
-  return "450"
+  return "200"
  elseif (mlvl == "10" or mlvl == "11") then
-  return "455"
+  return "204"
  elseif (mlvl == "12" or mlvl == "13" or mlvl == "14") then
-  return "460"
+  return "207"
  elseif (mlvl >= "15") then
-  return "465"
+  return "210"
  else
   return ""
  end
@@ -108,79 +106,29 @@ end
 
 function MythicWeeklyLootItemLevel(mlvl)
  if (mlvl == "2") then
-  return "440"
+  return "200"
  elseif (mlvl == "3") then
-  return "445"
- elseif (mlvl == "4" or mlvl == "5") then
-  return "450"
- elseif (mlvl == "6") then
-  return "455"
- elseif (mlvl == "7" or mlvl == "8" or mlvl == "9") then
-  return "460" 
+  return "203"
+ elseif (mlvl == "4") then
+  return "207"
+ elseif (mlvl == "5" or mlvl == "6") then
+  return "210"
+ elseif (mlvl == "7") then
+  return "213" 
+ elseif (mlvl == "8" or mlvl == "9") then
+  return "216"
  elseif (mlvl == "10" or mlvl == "11") then
-  return "465"
- elseif (mlvl == "12" or mlvl == "13" or mlvl == "14") then
-  return "470"
- elseif (mlvl >= "15") then
-  return "475"
+  return "220"
+ elseif (mlvl == "12" or mlvl == "13") then
+  return "223"
+ elseif (mlvl >= "14" or mlvl == "15") then
+  return "226"
  else
   return ""
  end
 end
 
-function MythicWeeklyResiduumAmount(mlvl)
- if (mlvl == "2") then
-  return "TBD"
- elseif (mlvl == "3") then
-  return "TBD"
- elseif (mlvl == "4") then
-  return "TBD"
- elseif (mlvl == "5") then
-  return "68"
- elseif (mlvl == "6") then
-  return "75"
- elseif (mlvl == "7") then
-  return "TBD"
- elseif (mlvl == "8") then
-  return "TBD"
- elseif (mlvl == "9") then
-  return "TBD"
- elseif (mlvl == "10") then
-  return "1700"
- elseif (mlvl == "11") then
-  return "1790" 
- elseif (mlvl == "12") then
-  return "1880"  
- elseif (mlvl == "13") then
-  return "1970"
- elseif (mlvl == "14") then
-  return "2060"
- elseif (mlvl == "15") then
-  return "2150"
- elseif (mlvl == "16") then
-  return "2240"
- elseif (mlvl == "17") then
-  return "2330"
- elseif (mlvl == "18") then
-  return "2420"
- elseif (mlvl == "19") then
-  return "2510"
- elseif (mlvl == "20") then
-  return "2600"
- elseif (mlvl == "21") then
-  return "2665"
- elseif (mlvl == "22") then
-  return "2730"
- elseif (mlvl == "23") then
-  return "2795"
- elseif (mlvl == "24") then
-  return "2860"
- elseif (mlvl == "25") then
-  return "2915"
- else
-  return ""
- end
-end
+
 function WhatADrop:OnInitialize()
 		self:Print(L["WhatADrop: Loaded"])
 end
