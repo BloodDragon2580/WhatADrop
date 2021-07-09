@@ -8,3 +8,6 @@ Tooltip for BFA
  
 
 You can also check a Keystone linked by a party member.
+
+Download Count
+https://hanadigital.github.io/grev/?user=BloodDragon2580&repo=WhatADrop
