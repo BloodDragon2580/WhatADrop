@@ -84,23 +84,23 @@ hooksecurefunc("ChatFrame_OnHyperlinkShow",SetHyperlink_Hook)
 
 function WhatADropItemLevel(mlvl)
  if (mlvl == "2") then
-  return "210"
- elseif (mlvl == "3") then
-  return "213"
- elseif (mlvl == "4") then
-  return "216"
- elseif (mlvl == "5") then
-  return "220"
- elseif (mlvl == "6" or mlvl == "7") then
-  return "223"
- elseif (mlvl == "8" or mlvl == "9") then
-  return "226"
- elseif (mlvl == "10" or mlvl == "11") then
-  return "229"
- elseif (mlvl == "12" or mlvl == "13") then
-  return "233"
- elseif (mlvl == "14" or mlvl == "15") then
   return "236"
+ elseif (mlvl == "3") then
+  return "239"
+ elseif (mlvl == "4") then
+  return "242"
+ elseif (mlvl == "5") then
+  return "246"
+ elseif (mlvl == "6" or mlvl == "7") then
+  return "249"
+ elseif (mlvl == "8" or mlvl == "9") then
+  return "252"
+ elseif (mlvl == "10" or mlvl == "11") then
+  return "255"
+ elseif (mlvl == "12" or mlvl == "13") then
+  return "259"
+ elseif (mlvl == "14" or mlvl == "15") then
+  return "262"
  else
   return ""
  end
@@ -108,23 +108,23 @@ end
 
 function MythicWeeklyLootItemLevel(mlvl)
  if (mlvl == "2" or mlvl == "3" or mlvl == "4") then
-  return "226"
- elseif (mlvl == "5" or mlvl == "6") then
-  return "229"
- elseif (mlvl == "7") then
-  return "233" 
- elseif (mlvl == "8" or mlvl == "9") then
-  return "236"
- elseif (mlvl == "10") then
-  return "239"
- elseif (mlvl == "11") then
-  return "242"
- elseif (mlvl == "12" or mlvl == "13") then
-  return "246"
- elseif (mlvl == "14") then
-  return "249"
- elseif (mlvl >= "15") then
   return "252"
+ elseif (mlvl == "5" or mlvl == "6") then
+  return "255"
+ elseif (mlvl == "7") then
+  return "259" 
+ elseif (mlvl == "8" or mlvl == "9") then
+  return "262"
+ elseif (mlvl == "10") then
+  return "265"
+ elseif (mlvl == "11") then
+  return "268"
+ elseif (mlvl == "12" or mlvl == "13") then
+  return "272"
+ elseif (mlvl == "14") then
+  return "275"
+ elseif (mlvl >= "15") then
+  return "278"
  else
   return ""
  end
