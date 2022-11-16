@@ -18,7 +18,6 @@ function sdm_OnEnterTippedButton(self)
 	GameTooltip:SetOwner(self, "ANCHOR_RIGHT")		
 	GameTooltip:AddLine("|CFFFF9900" .. L["Weekly Chest Reward"]  .."|r")
 	GameTooltip:AddLine("|cff00ff00" .. self.tooltipText .."|r")
-	GameTooltip:Show()
 end
 
 function sdm_OnLeaveTippedButton()
@@ -78,7 +77,7 @@ local function SetHyperlink_Hook(self,hyperlink,text,button)
 	end
 end
  
-GameTooltip:HookScript("OnTooltipSetItem", OnTooltipSetItem)
+TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, OnTooltipSetItem)
 GameTooltip:HookScript("OnTooltipCleared", OnTooltipCleared)
 hooksecurefunc("ChatFrame_OnHyperlinkShow",SetHyperlink_Hook)
 
