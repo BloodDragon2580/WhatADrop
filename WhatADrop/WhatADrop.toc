@@ -1,6 +1,6 @@
 ## Interface: 100002
 ## Title: |cffd6266cWhatADrop|r
-## Version: 8.6
+## Version: 8.7
 ## Notes: |cff00ff00Mythic Loot item level for Keystone, Weekly Chest and Weekly Azerite Armor.
 ## Author: BloddDragon2580
 
