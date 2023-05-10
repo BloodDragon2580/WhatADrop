@@ -85,11 +85,11 @@ function WhatADropItemLevel(mlvl)
     if (mlvl == "2") then
         return "402"
     elseif (mlvl == "3") then
-        return "402"
+        return "405"
     elseif (mlvl == "4") then
         return "405"
     elseif (mlvl == "5") then
-        return "405"
+        return "408"
     elseif (mlvl == "6") then
         return "408"
     elseif (mlvl == "7") then
@@ -99,13 +99,13 @@ function WhatADropItemLevel(mlvl)
     elseif (mlvl == "9") then
         return "415"
     elseif (mlvl == "10") then
-        return "418"
+        return "415"
     elseif (mlvl == "11") then
         return "418"
     elseif (mlvl == "12") then
         return "418"
     elseif (mlvl == "13") then
-        return "418"
+        return "421"
     elseif (mlvl == "14") then
         return "421"
     elseif (mlvl >= "15") then
@@ -127,31 +127,31 @@ end
 
 function MythicWeeklyLootItemLevel(mlvl)
     if (mlvl == "2") then
-        return "408"
+        return "415"
     elseif (mlvl == "3") then
-        return "411"
-    elseif (mlvl == "4") then
-        return "411"
-    elseif (mlvl == "5") then
-        return "415"
-    elseif (mlvl == "6") then
-        return "415"
-    elseif (mlvl == "7") then
         return "418"
-    elseif (mlvl == "8") then
+    elseif (mlvl == "4") then
         return "421"
-    elseif (mlvl == "9") then
+    elseif (mlvl == "5") then
         return "421"
-    elseif (mlvl == "10") then
+    elseif (mlvl == "6") then
         return "424"
-    elseif (mlvl == "11") then
+    elseif (mlvl == "7") then
+        return "424"
+    elseif (mlvl == "8") then
         return "428"
-    elseif (mlvl == "12") then
+    elseif (mlvl == "9") then
+        return "428"
+    elseif (mlvl == "10") then
         return "431"
+    elseif (mlvl == "11") then
+        return "431"
+    elseif (mlvl == "12") then
+        return "434"
     elseif (mlvl == "13") then
         return "434"
     elseif (mlvl == "14") then
-        return "434"
+        return "437"
     elseif (mlvl >= "15") then
         return "437"
     elseif (mlvl == "16") then
