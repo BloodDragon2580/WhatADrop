@@ -83,43 +83,43 @@ hooksecurefunc("ChatFrame_OnHyperlinkShow",SetHyperlink_Hook)
 
 function WhatADropItemLevel(mlvl)
     if (mlvl == "2") then
-        return "496"
+        return "597"
     elseif (mlvl == "3") then
-        return "499"
+        return "597"
     elseif (mlvl == "4") then
-        return "499"
+        return "600"
     elseif (mlvl == "5") then
-        return "502"
+        return "603"
     elseif (mlvl == "6") then
-        return "502"
+        return "606"
     elseif (mlvl == "7") then
-        return "506"
+        return "610"
     elseif (mlvl == "8") then
-        return "506"
+        return "610"
     elseif (mlvl == "9") then
-        return "509"
+        return "613"
     elseif (mlvl == "10") then
-        return "509"
+        return "613"
     elseif (mlvl == "11") then
-        return "509"
+        return "613"
     elseif (mlvl == "12") then
-        return "509"
+        return "613"
     elseif (mlvl == "13") then
-        return "509"
+        return "613"
     elseif (mlvl == "14") then
-        return "509"
+        return "613"
     elseif (mlvl >= "15") then
-        return "509"
+        return "613"
     elseif (mlvl >= "16") then
-        return "509"
+        return "613"
     elseif (mlvl >= "17") then
-        return "509"
+        return "613"
     elseif (mlvl >= "18") then
-        return "509+"
+        return "613+"
     elseif (mlvl >= "19") then
-        return "509"
+        return "613"
     elseif (mlvl >= "20") then
-        return "509"
+        return "613"
     else
         return ""
     end
@@ -127,43 +127,43 @@ end
 
 function MythicWeeklyLootItemLevel(mlvl)
     if (mlvl == "2") then
-        return "509"
+        return "606"
     elseif (mlvl == "3") then
-        return "509"
+        return "610"
     elseif (mlvl == "4") then
-        return "512"
+        return "610"
     elseif (mlvl == "5") then
-        return "512"
+        return "613"
     elseif (mlvl == "6") then
-        return "515"
+        return "613"
     elseif (mlvl == "7") then
-        return "515"
+        return "616"
     elseif (mlvl == "8") then
-        return "519"
+        return "619"
     elseif (mlvl == "9") then
-        return "519"
+        return "619"
     elseif (mlvl == "10") then
-        return "522"
+        return "623"
     elseif (mlvl == "11") then
-        return "522"
+        return "623"
     elseif (mlvl == "12") then
-        return "522"
+        return "623"
     elseif (mlvl == "13") then
-        return "522"
+        return "623"
     elseif (mlvl == "14") then
-        return "522"
+        return "623"
     elseif (mlvl >= "15") then
-        return "522"
+        return "623"
     elseif (mlvl == "16") then
-        return "522"
+        return "623"
     elseif (mlvl == "17") then
-        return "522"
+        return "623"
     elseif (mlvl == "18") then
-        return "522"
+        return "623"
     elseif (mlvl == "19") then
-        return "522"
+        return "623"
     elseif (mlvl >= "20") then
-        return "522"
+        return "623"
     else
         return ""
     end
