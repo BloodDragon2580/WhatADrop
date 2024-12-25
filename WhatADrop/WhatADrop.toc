@@ -1,6 +1,6 @@
 ## Interface: 110007
 ## Title: |cffd6266cWhatADrop|r
-## Version: 14.5
+## Version: 14.6
 ## Notes: |cff00ff00Mythic Loot item level for Keystone, Weekly Chest and Weekly Azerite Armor.
 ## Notes-ruRU: |cff00ff00Уровень предметов эпохальной добычи для ключей, еженедельных сундуков и еженедельных Азеритовых доспехов.
 ## Author: BloddDragon2580
