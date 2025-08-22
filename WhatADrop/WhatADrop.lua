@@ -82,93 +82,54 @@ GameTooltip:HookScript("OnTooltipCleared", OnTooltipCleared)
 hooksecurefunc("ChatFrame_OnHyperlinkShow",SetHyperlink_Hook)
 
 function WhatADropItemLevel(mlvl)
-    if (mlvl == "2") then
-        return "639"
-    elseif (mlvl == "3") then
-        return "639"
-    elseif (mlvl == "4") then
-        return "642"
-    elseif (mlvl == "5") then
-        return "645"
-    elseif (mlvl == "6") then
-        return "649"
-    elseif (mlvl == "7") then
-        return "649"
-    elseif (mlvl == "8") then
-        return "652"
-    elseif (mlvl == "9") then
-        return "652"
-    elseif (mlvl == "10") then
-        return "655"
-    elseif (mlvl == "11") then
-        return "655"
-    elseif (mlvl == "12") then
-        return "655"
-    elseif (mlvl == "13") then
-        return "655"
-    elseif (mlvl == "14") then
-        return "655"
-    elseif (mlvl >= "15") then
-        return "655"
-    elseif (mlvl >= "16") then
-        return "655"
-    elseif (mlvl >= "17") then
-        return "655"
-    elseif (mlvl >= "18") then
-        return "655"
-    elseif (mlvl >= "19") then
-        return "655"
-    elseif (mlvl >= "20") then
-        return "655"
+    mlvl = tonumber(mlvl)
+    if not mlvl then return "" end
+
+    if mlvl <= 3 then
+        return "684"
+    elseif mlvl == 4 then
+        return "688"
+    elseif mlvl == 5 then
+        return "691"
+    elseif mlvl == 6 then
+        return "694"
+    elseif mlvl == 7 then
+        return "694"
+    elseif mlvl == 8 then
+        return "697"
+    elseif mlvl == 9 then
+        return "697"
+    elseif mlvl >= 10 then
+        return "701"
     else
         return ""
     end
 end
 
 function MythicWeeklyLootItemLevel(mlvl)
-    if (mlvl == "2") then
-        return "649"
-    elseif (mlvl == "3") then
-        return "649"
-    elseif (mlvl == "4") then
-        return "652"
-    elseif (mlvl == "5") then
-        return "652"
-    elseif (mlvl == "6") then
-        return "655"
-    elseif (mlvl == "7") then
-        return "658"
-    elseif (mlvl == "8") then
-        return "658"
-    elseif (mlvl == "9") then
-        return "658"
-    elseif (mlvl == "10") then
-        return "622"
-    elseif (mlvl == "11") then
-        return "622"
-    elseif (mlvl == "12") then
-        return "622"
-    elseif (mlvl == "13") then
-        return "622"
-    elseif (mlvl == "14") then
-        return "622"
-    elseif (mlvl >= "15") then
-        return "622"
-    elseif (mlvl == "16") then
-        return "622"
-    elseif (mlvl == "17") then
-        return "622"
-    elseif (mlvl == "18") then
-        return "622"
-    elseif (mlvl == "19") then
-        return "622"
-    elseif (mlvl >= "20") then
-        return "622"
+    mlvl = tonumber(mlvl)
+    if not mlvl then return "" end
+
+    if mlvl <= 3 then
+        return "694"
+    elseif mlvl == 4 then
+        return "697"
+    elseif mlvl == 5 then
+        return "697"
+    elseif mlvl == 6 then
+        return "701"
+    elseif mlvl == 7 then
+        return "704"
+    elseif mlvl == 8 then
+        return "704"
+    elseif mlvl == 9 then
+        return "704"
+    elseif mlvl >= 10 then
+        return "707"
     else
         return ""
     end
 end
-
 
 function WhatADrop:OnInitialize()
 		self:Print(L["WhatADrop: Loaded"])
