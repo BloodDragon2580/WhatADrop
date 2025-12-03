@@ -79,7 +79,20 @@ end
  
 TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, OnTooltipSetItem)
 GameTooltip:HookScript("OnTooltipCleared", OnTooltipCleared)
-hooksecurefunc("ChatFrame_OnHyperlinkShow",SetHyperlink_Hook)
+
+-- TWW / 11.2.7+: ChatFrame_OnHyperlinkShow ist nicht mehr global eine Funktion.
+-- Ältere Clients: falls sie existiert, wie bisher hooken.
+if type(ChatFrame_OnHyperlinkShow) == "function" then
+    -- Für ältere Versionen / andere Clients
+    hooksecurefunc("ChatFrame_OnHyperlinkShow", SetHyperlink_Hook)
+else
+    -- Retail 11.2.7+: stattdessen SetItemRef hooken, das bei Chat-Links aufgerufen wird
+    hooksecurefunc("SetItemRef", function(link, text, button, chatFrame)
+        -- Wir mappen die Argumente so, wie SetHyperlink_Hook sie erwartet:
+        -- (self, hyperlink, text, button)
+        SetHyperlink_Hook(chatFrame, link, text, button)
+    end)
+end
 
 function WhatADropItemLevel(mlvl)
     mlvl = tonumber(mlvl)
