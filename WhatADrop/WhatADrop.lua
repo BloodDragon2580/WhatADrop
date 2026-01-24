@@ -98,22 +98,24 @@ function WhatADropItemLevel(mlvl)
     mlvl = tonumber(mlvl)
     if not mlvl then return "" end
 
-    if mlvl <= 3 then
-        return "684"
-    elseif mlvl == 4 then
-        return "688"
-    elseif mlvl == 5 then
-        return "691"
-    elseif mlvl == 6 then
-        return "694"
-    elseif mlvl == 7 then
-        return "694"
-    elseif mlvl == 8 then
-        return "697"
-    elseif mlvl == 9 then
-        return "697"
-    elseif mlvl >= 10 then
-        return "701"
+    if mlvl == 0 then
+        return "246"
+    elseif mlvl == 2 or mlvl == 3 then
+        return "250"
+    elseif mlvl == 4 or mlvl == 5 then
+        return "256"
+    elseif mlvl == 6 or mlvl == 7 then
+        return "259"
+    elseif mlvl == 8 or mlvl == 9 then
+        return "263"
+    elseif mlvl == 10 or mlvl == 11 then
+        return "266"
+    elseif mlvl >= 12 and mlvl <= 14 then
+        return "269"
+    elseif mlvl >= 15 and mlvl <= 17 then
+        return "272"
+    elseif mlvl >= 18 then
+        return "276"
     else
         return ""
     end
@@ -123,22 +125,22 @@ function MythicWeeklyLootItemLevel(mlvl)
     mlvl = tonumber(mlvl)
     if not mlvl then return "" end
 
-    if mlvl <= 3 then
-        return "694"
-    elseif mlvl == 4 then
-        return "697"
-    elseif mlvl == 5 then
-        return "697"
-    elseif mlvl == 6 then
-        return "701"
-    elseif mlvl == 7 then
-        return "704"
-    elseif mlvl == 8 then
-        return "704"
-    elseif mlvl == 9 then
-        return "704"
-    elseif mlvl >= 10 then
-        return "707"
+    if mlvl == 2 or mlvl == 3 then
+        return "259"
+    elseif mlvl == 4 or mlvl == 5 then
+        return "263"
+    elseif mlvl == 6 or mlvl == 7 then
+        return "269"
+    elseif mlvl == 8 or mlvl == 9 then
+        return "269"
+    elseif mlvl == 10 or mlvl == 11 then
+        return "272"
+    elseif mlvl >= 12 and mlvl <= 14 then
+        return "276"
+    elseif mlvl >= 15 and mlvl <= 17 then
+        return "279"
+    elseif mlvl >= 18 then
+        return "282"
     else
         return ""
     end
