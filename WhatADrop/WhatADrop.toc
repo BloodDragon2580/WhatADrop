@@ -3,7 +3,7 @@
 ## Version: 19.1
 ## Notes: |cff00ff00Mythic Loot item level for Keystone, Weekly Chest and Weekly Azerite Armor.
 ## Notes-ruRU: |cff00ff00Уровень предметов эпохальной добычи для ключей, еженедельных сундуков и еженедельных Азеритовых доспехов.
-## Author: BloddDragon2580
+## Author: BloodDragon2580
 ## IconTexture: Interface\AddOns\WhatADrop\Media\Texture\logo
 
 embeds.xml
